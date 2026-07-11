@@ -31,7 +31,7 @@ export default function AwakenPage() {
             <h1 className="text-lg md:text-left w-full font-black uppercase tracking-tight text-white">Muscle Monitor App</h1>
             <p className="text-cyan-500 text-xs uppercase tracking-widest mt-1">Measure Muscle inch by inch</p>
           </div>
-          <div className="md:text-right w-full text-center">
+          <div className=" w-full text-center">
             <h1 className="text-md md:text-xl font-black uppercase text-emerald-100">
               Welcome
               {/* Welcome <br /> {stats.name || 'Initiate'} */}
@@ -39,6 +39,7 @@ export default function AwakenPage() {
             <p className="text-[10px] text-emerald-400 uppercase tracking-widest">
               System active for your physical registry.
             </p>
+            <a href='/info' className='cursor-pointor text-xs text-right'>Info</a>
           </div>
         </header>
 
