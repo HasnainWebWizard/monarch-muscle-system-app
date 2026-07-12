@@ -8,7 +8,7 @@ export default function InfoPage() {
         
         {/* Header */}
         <header className="border-b border-emerald-900/40 pb-8">
-          <h1 className="text-2xl font-black uppercase tracking-tight text-white">Monarch Muscle System</h1>
+          <h1 className="text-2xl font-black uppercase tracking-tight text-white">Peak Muscle System</h1>
           <p className="text-emerald-700 text-[10px] uppercase tracking-[0.3em] mt-2 font-black">
             System Documentation & Anatomical Calibration
           </p>
@@ -69,7 +69,7 @@ export default function InfoPage() {
         </section>
 
         <footer className="text-[9px] text-emerald-900 uppercase tracking-widest pt-8 border-t border-emerald-900/20">
-          Monarch Muscle System | Live @ monarch-muscle-system-app.vercel.app
+          Peak Muscle System | Live @ monarch-muscle-system-app.vercel.app
         </footer>
       </div>
     </div>

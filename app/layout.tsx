@@ -1,4 +1,3 @@
-// app/layout.tsx
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -7,8 +6,11 @@ import { MetricsProvider } from "./context/MetricsContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Monarch Muscle System",
-  description: "A fully adaptable, high-performance fitness tracking platform tailored to your specific biomechanics.",
+  title: "Peak Muscle System",
+  description: "Measure physical metrics inch by inch. A biomechanics archival platform.",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -18,7 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-slate-950 text-slate-50 antialiased`}>
+      <head>
+        {/* Favicon link if needed explicitly */}
+        <link rel="icon" href="/logo.png" sizes="any" />
+      </head>
+      <body className={`${inter.className} bg-black text-amber-50 antialiased`}>
         <MetricsProvider>
           <main className="min-h-screen">
             {children}
