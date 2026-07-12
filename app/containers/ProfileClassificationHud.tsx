@@ -52,7 +52,7 @@ export function ProfileClassificationHud() {
           {stats.name}
         </span>
         <br />
-        Bloodline Manifestation
+        Muscle Manifestation System
       </div>
 
       {/* Metrics Grid */}

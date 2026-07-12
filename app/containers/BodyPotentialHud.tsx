@@ -31,7 +31,7 @@ export function BodyPotentialHud() {
         <GlowingEyes />
 
         <h3 className="text-center text-[10px] font-black uppercase tracking-[0.2em] text-amber-500 drop-shadow-[0_0_5px_rgba(217,119,6,0.5)] mt-3">
-          Bioliogical Potential
+          Biological Potential
         </h3>
         <span className="text-center text-xl font-black text-amber-200 drop-shadow-[0_0_5px_rgba(217,119,6,0.5)] font-serif tracking-tighter ">{totalReached}%</span>
       </div>

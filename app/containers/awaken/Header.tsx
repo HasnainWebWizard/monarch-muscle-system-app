@@ -2,9 +2,9 @@
 export default function Header() {
     return(
         <>
-        <header className="w-full flex flex-wrap justify-between items-end border-b border-amber-600 pb-4 gap-2">
+        <header className="w-full flex flex-wrap justify-between items-end border-b border-amber-600 pb-4 gap-2 my-4">
           <div className='w-full text-center'>
-            <h1 className="text-lg w-full drop-shadow-[0_0_5px_rgba(6,182,212,100)] uppercase tracking-[0.3em] text-amber-500">Peak Muscle System</h1>
+            <h1 className="text-lg w-full drop-shadow-[0_0_5px_rgba(6,182,10,0.5)] uppercase text-amber-600 font-semibold">Muscle Manifestation System</h1>
             <p className="text-cyan-500 text-xs uppercase tracking-widest mt-1">Measure Muscle inch by inch</p>
           </div>
         </header>

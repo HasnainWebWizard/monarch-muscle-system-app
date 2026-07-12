@@ -6,7 +6,7 @@ import { MetricsProvider } from "./context/MetricsContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Peak Muscle System",
+  title: "Muscle Manifestation System",
   description: "Measure physical metrics inch by inch. A biomechanics archival platform.",
   icons: {
     icon: "/logo.png",
