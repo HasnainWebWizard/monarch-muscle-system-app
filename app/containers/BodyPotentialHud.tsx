@@ -9,12 +9,12 @@ export function BodyPotentialHud() {
   const { stats } = useMetrics();
 
   // 1. Height-based limit (5'8" = 172.7cm)
-  const heightMeters = 1.727;
-  const maxWeightLimit = (25 * (heightMeters * heightMeters)); // Natural Limit
+  const heightMeters = (stats.heightCm || 173) / 100;
+  const maxWeightLimit = (25 * (heightMeters * heightMeters));
 
   // 2. Calculate "Reached" %
   // Combined score: 60% based on weight, 40% based on muscle point sum (normalized to 180 inches)
-  const muscleSum = Object.values(stats.musclePoints).reduce((a, b) => a + b, 0);
+  const muscleSum = Object.values(stats.musclePoints || {}).reduce((a, b) => a + b, 0);
   const weightProgress = Math.min(100, (stats.weightKg / maxWeightLimit) * 100);
   const muscleProgress = Math.min(100, (muscleSum / 180) * 100);
   const totalReached = ((weightProgress * 0.6) + (muscleProgress * 0.4)).toFixed(1);
@@ -28,7 +28,9 @@ export function BodyPotentialHud() {
       <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-amber-600/50" />
 
       <div className="flex flex-col mb-4">
-        <GlowingEyes />
+        <div className="transform -translate-y-4">
+          <GlowingEyes />
+        </div>
 
         <h3 className="text-center text-[10px] font-black uppercase tracking-[0.2em] text-amber-500 drop-shadow-[0_0_5px_rgba(217,119,6,0.5)] mt-3">
           Biological Potential

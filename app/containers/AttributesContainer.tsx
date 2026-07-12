@@ -104,7 +104,7 @@ export function AttributesContainer() {
                   <span className={`px-2 py-0.5 text-[9px] sm:text-[10px] font-black uppercase border tracking-tight ${
                     currentRank.startsWith('S') ? 'bg-amber-500/10 text-amber-400 border-amber-500/40' :
                     currentRank.startsWith('A') ? 'bg-amber-800/20 text-amber-500 border-amber-800/40' :
-                    'bg-black border-amber-900/50 text-amber-800'
+                    'bg-black border-amber-900/50 text-amber-700'
                   }`}>
                     {currentRank}
                   </span>
@@ -133,7 +133,7 @@ export function AttributesContainer() {
                 />
               </div>
 
-              <div className="flex justify-between text-[8px] sm:text-[9px] font-mono text-amber-900/80 uppercase">
+              <div className="flex justify-between text-[10px] sm:text-[9px] font-mono text-amber-400/80 uppercase">
                 <span>{percent}% through tier</span>
                 <span>{next !== null ? `${remaining}" until ${nextRank}-RANK` : 'MAX CEILING'}</span>
               </div>
