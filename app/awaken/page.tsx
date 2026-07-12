@@ -8,6 +8,7 @@ import { StatusHistoryTracker } from '../containers/StatusHistoryTracker';
 import { BodyPotentialHud } from '../containers/BodyPotentialHud';
 import { ProfileClassificationHud } from '../containers/ProfileClassificationHud';
 import { CharacterFooterFieldGuide } from '../containers/CharacterFooterFieldGuide';
+import Header from '../containers/awaken/Header';
 
 export default function AwakenPage() {
   const { stats } = useMetrics();
@@ -22,26 +23,11 @@ export default function AwakenPage() {
   if (!stats.isConfigured || stats.heightCm === 0) return null;
 
   return (
-    <main className="min-h-screen bg-[#050505] text-slate-200 p-4 md:p-6 lg:p-10">
+    <main className="min-h-screen bg-[#050505] text-slate-200 p-4 md:p-6 lg:p-10 w-full">
       <div className="max-w-6xl mx-auto space-y-6">
 
         {/* Page Header */}
-        <header className="flex flex-wrap justify-between items-end border-b border-cyan-600 pb-4 gap-2">
-          <div className='w-full text-center'>
-            <h1 className="text-lg md:text-left w-full font-black uppercase tracking-tight text-white">Muscle Monitor App</h1>
-            <p className="text-cyan-500 text-xs uppercase tracking-widest mt-1">Measure Muscle inch by inch</p>
-          </div>
-          <div className=" w-full text-center">
-            <h1 className="text-md md:text-xl font-black uppercase text-emerald-100">
-              Welcome
-              {/* Welcome <br /> {stats.name || 'Initiate'} */}
-            </h1>
-            <p className="text-[10px] text-emerald-400 uppercase tracking-widest">
-              System active for your physical registry.
-            </p>
-            <a href='/info' className='cursor-pointor text-xs text-right'>Info</a>
-          </div>
-        </header>
+        <Header />
 
         {/* Dashboard Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">

@@ -10,6 +10,9 @@ export interface MusclePoints {
   forearms: number;
   thighs: number;
   calves: number;
+  // Change the index signature to explicitly return number, 
+  // and ensure the specific keys are not marked as optional.
+  [key: string]: number;
 }
 
 export interface StatusHistorySnapshot {
@@ -84,12 +87,17 @@ export function MetricsProvider({ children }: { children: React.ReactNode }) {
   };
 
   const updateMusclePoints = (points: Partial<MusclePoints>) => {
+    // Create a copy and merge explicitly
+    const updatedMusclePoints: MusclePoints = {
+      ...stats.musclePoints,
+      ...points,
+    } as MusclePoints;
+
     saveAndSet({
       ...stats,
-      musclePoints: { ...stats.musclePoints, ...points }
+      musclePoints: updatedMusclePoints
     });
   };
-
   const incrementWater = (amount: number) => {
     saveAndSet({ ...stats, dailyWaterDrank: parseFloat((stats.dailyWaterDrank + amount).toFixed(2)) });
   };

@@ -3,6 +3,7 @@
 
 import React from 'react';
 import { useMetrics } from '../context/MetricsContext';
+import GlowingEyes from '../components/GlowingEyes';
 
 export function BodyPotentialHud() {
   const { stats } = useMetrics();
@@ -27,42 +28,10 @@ export function BodyPotentialHud() {
       <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-amber-600/50" />
 
       <div className="flex flex-col mb-4">
-        <div className="relative flex flex-col items-center justify-center">
-          {/* Glowing Eyes */}
-          <div className="absolute top-1/2 flex gap-2">
-            <div
-              className="
-      w-5.5 h-1 rounded-full transform rotate-6
-      bg-emerald-300
-      animate-pulse border border-amber-400 blur-xs
-      shadow-[0_0_8px_#6ee7b7,0_0_18px_#34d399,0_0_35px_#10b981,0_0_60px_#09e69c]
-    "
-            />
-            <div
-              className="
-      w-5.5 h-1 rounded-full transform -rotate-6
-      bg-emerald-300
-      animate-pulse border border-amber-400 blur-xs
-      shadow-[0_0_8px_#6ee7b7,0_0_18px_#34d399,0_0_35px_#10b981,0_0_60px_#09e69c]
-    "
-            />
-          </div>
-
-          {/* Silhouette Body (The Aura Figure) */}
-          <div className="relative w-16 h-24 opacity-80 mb-5 ">
-            {/* Head */}
-          </div>
-
-          {/* Aura Pulse Effect */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-32 h-32 rounded-full border border-emerald-400 animate-pulse blur-xl" />
-            <div className="absolute w-24 h-24 rounded-full border border-amber-400 animate-pulse blur-xl" />
-            <div className="absolute w-29 h-29 rounded-full border border-cyan-400 animate-pulse blur-xl" />
-          </div>
-        </div>
+        <GlowingEyes />
 
         <h3 className="text-center text-[10px] font-black uppercase tracking-[0.2em] text-amber-500 drop-shadow-[0_0_5px_rgba(217,119,6,0.5)] mt-3">
-          Bloodline Potential
+          Bioliogical Potential
         </h3>
         <span className="text-center text-xl font-black text-amber-200 drop-shadow-[0_0_5px_rgba(217,119,6,0.5)] font-serif tracking-tighter ">{totalReached}%</span>
       </div>
@@ -80,7 +49,7 @@ export function BodyPotentialHud() {
           Frame Limit: <span className="text-amber-200 font-bold block text-[10px]">{maxWeightLimit.toFixed(1)}kg</span>
         </div>
         <div className="border border-amber-900/20 p-2 bg-amber-950/20">
-          Muscle Vol: <span className="text-amber-200 font-bold block text-[10px]">{muscleSum.toFixed(1)}"</span>
+          Muscle Volume: <span className="text-amber-200 font-bold block text-[10px]">{muscleSum.toFixed(1)}"</span>
         </div>
       </div>
     </div>
