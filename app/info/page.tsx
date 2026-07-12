@@ -8,53 +8,68 @@ export default function InfoPage() {
         
         {/* Header */}
         <header className="border-b border-emerald-900/40 pb-8">
-          <h1 className="text-2xl font-black uppercase tracking-tight text-white">TrigrLog AI</h1>
-          <p className="text-emerald-700 text-xs uppercase tracking-widest mt-2">Technical Documentation & System Logic</p>
+          <h1 className="text-2xl font-black uppercase tracking-tight text-white">Monarch Muscle System</h1>
+          <p className="text-emerald-700 text-[10px] uppercase tracking-[0.3em] mt-2 font-black">
+            System Documentation & Anatomical Calibration
+          </p>
         </header>
 
-        {/* Overview */}
-        <section className="space-y-4">
-          <h2 className="text-sm font-black uppercase tracking-widest text-emerald-500">System Overview</h2>
-          <p className="text-sm text-emerald-200/80 leading-relaxed">
-            TrigrLog AI is a developer utility designed to monitor and track performance metrics. 
-            Initially built as a webhook-based notification system, the application has been 
-            extended to support precise physical attribute tracking through a centralized dashboard.
+        {/* Methodology */}
+        <section className="space-y-6">
+          <h2 className="text-sm font-black uppercase tracking-widest text-emerald-500 border-l-2 border-emerald-700 pl-4">
+            Methodology
+          </h2>
+          <p className="text-xs text-emerald-300/70 leading-relaxed max-w-2xl">
+            The Peak Muscle System anchors physical progress to a visual RPG Rank System (Ranks E through S). 
+            Instead of tracking arbitrary data, this system benchmarks your measurements against real-world 
+            human biological standards tailored for a 5'8" frame. Nonetheless, Any height person can use this system.
           </p>
         </section>
 
-        {/* Features */}
-        <section className="grid md:grid-cols-2 gap-6">
-          <div className="border border-emerald-900/30 p-6 bg-black/40">
-            <h3 className="text-xs font-black uppercase tracking-widest mb-3 text-emerald-400">Attribute Tracking</h3>
-            <p className="text-xs text-emerald-700 leading-relaxed">
-              Real-time monitoring of muscle metrics (Shoulders, Chest, Biceps, Forearms, Thighs, Calves). 
-              Includes manual override capability and direct data input for precise synchronization.
-            </p>
-          </div>
-          <div className="border border-emerald-900/30 p-6 bg-black/40">
-            <h3 className="text-xs font-black uppercase tracking-widest mb-3 text-emerald-400">Progression Logic</h3>
-            <p className="text-xs text-emerald-700 leading-relaxed">
-              The application utilizes a tiered ranking system (D through S-RANK) based on specific 
-              inch-based thresholds. It calculates progress percentage within current tiers to 
-              provide granular feedback on physical development.
-            </p>
-          </div>
-        </section>
-
-        {/* Technical Stack & Data */}
+        {/* Rank Definitions */}
         <section className="space-y-6">
-          <h2 className="text-sm font-black uppercase tracking-widest text-emerald-500">Data Management</h2>
-          <div className="bg-black/40 border border-emerald-900/20 p-6">
-            <ul className="space-y-3 text-xs text-emerald-700">
-              <li>• <span className="text-emerald-300 font-bold uppercase">Snapshot Archival:</span> Persistent storage of historical metrics via local state management.</li>
-              <li>• <span className="text-emerald-300 font-bold uppercase">Dynamic Calculation:</span> Real-time rank determination based on customizable bounds per attribute.</li>
-              <li>• <span className="text-emerald-300 font-bold uppercase">Interface:</span> Responsive React-based UI with fluid typography for desktop and mobile accessibility.</li>
-            </ul>
+          <h2 className="text-sm font-black uppercase tracking-widest text-emerald-500 border-l-2 border-emerald-700 pl-4">
+            Rank Classifications
+          </h2>
+          <div className="grid md:grid-cols-2 gap-4 text-[10px] text-emerald-700 uppercase tracking-widest">
+            <p><span className="text-emerald-500 font-bold">[Rank E] Underdeveloped:</span> Starting baseline for lean frames.</p>
+            <p><span className="text-emerald-500 font-bold">[Rank D] Untrained:</span> Standard civilian average.</p>
+            <p><span className="text-emerald-500 font-bold">[Rank C] Athletic:</span> Visible muscle shape and definition.</p>
+            <p><span className="text-emerald-500 font-bold">[Rank B] Highly Developed:</span> Significant mass; "obvious lifter."</p>
+            <p><span className="text-emerald-500 font-bold">[Rank A] Advanced:</span> Elite natural development.</p>
+            <p><span className="text-emerald-500 font-bold">[Rank S] Elite:</span> Peak aesthetic V-taper and separation.</p>
           </div>
         </section>
 
-        <footer className="border-t border-emerald-900/20 pt-8 text-center">
-          <p className="text-[10px] text-emerald-900 uppercase tracking-widest">TrigrLog AI © 2026. System Operational.</p>
+        {/* Index Reference */}
+        <section className="border-t border-emerald-900/30 pt-8">
+          <h2 className="text-sm font-black uppercase tracking-widest text-emerald-500 mb-6">5'8" Muscle Index Reference</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+            {['Shoulders', 'Chest', 'Arms', 'Forearms', 'Thighs', 'Calves'].map((muscle) => (
+              <div key={muscle} className="bg-black/40 p-4 border border-emerald-900/20">
+                <h3 className="text-[9px] font-black uppercase tracking-widest text-emerald-400 mb-2">{muscle}</h3>
+                <div className="text-[9px] text-emerald-800 space-y-1">
+                  <p>E: {muscle === 'Shoulders' ? '<44' : muscle === 'Chest' ? '<36.5' : muscle === 'Arms' ? '<12' : muscle === 'Forearms' ? '<10.25' : muscle === 'Thighs' ? '<19' : '<12.75'}"</p>
+                  <p>S: {muscle === 'Shoulders' ? '52+' : muscle === 'Chest' ? '45+' : muscle === 'Arms' ? '16.75+' : muscle === 'Forearms' ? '13.25+' : muscle === 'Thighs' ? '25.5+' : '16+'}"</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Rules */}
+        <section className="border-t border-emerald-900/30 pt-8 space-y-3">
+          <h2 className="text-sm font-black uppercase tracking-widest text-emerald-500">Protocol</h2>
+          <p className="text-[10px] text-emerald-700 tracking-widest uppercase">
+            • Measure on the 10th of every month at 10:50 PM.
+          </p>
+          <p className="text-[10px] text-emerald-700 tracking-widest uppercase">
+            • Conditions: Rest day or pre-workout; use consistent tape methodology.
+          </p>
+        </section>
+
+        <footer className="text-[9px] text-emerald-900 uppercase tracking-widest pt-8 border-t border-emerald-900/20">
+          Monarch Muscle System | Live @ monarch-muscle-system-app.vercel.app
         </footer>
       </div>
     </div>
